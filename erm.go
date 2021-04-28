@@ -30,5 +30,5 @@ func New(err interface{}, m string) errmsg {
 	if e, ok := err.(string); ok {
 		return errmsg{err: e, msg: m}
 	}
-	panic("erm.ErrMsg requirese either an error or a string")
+	panic("erm.ErrMsg requires either an error or a string")
 }

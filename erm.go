@@ -19,6 +19,7 @@ type ErrMsgWriter interface {
 func (e errmsg) Error() string           { return e.err }
 func (e errmsg) Read() string            { return e.msg }
 func (e errmsg) Write(msg string) errmsg { e.msg = msg; return e }
+func (e errmsg) Message() string         { return e.msg }
 
 // New returns an error of types errmsg that conforms to the ErrMsg
 // interface, which adds the Read{} functionality for passing messages.
